@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			
+		</div>
+		<div id="aa">
+			
+		</div>
+	</body>
+</html>
+<script src="ajax.js"></script>
+<script type="text/javascript">
+	ajax("get","data/aa.txt",true,ff)
+	function ff(data){
+		var arr=JSON.parse(data)
+		document.getElementById("div").innerHTML=arr[1].name
+		document.getElementById("div").innerHTML=arr[0].name
+		document.getElementById("aa").innerHTML=arr[1].age
+	}
+</script>
